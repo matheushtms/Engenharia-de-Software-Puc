@@ -1,0 +1,31 @@
+cff-version: 1.0.1
+message: This software is part of the course "Programação para aplicação desktop" at PUC Minas, Brazil. It is a project developed by students in the 2025/1 semester.
+title: Re.use
+authors:
+  - family-names: Carvalho
+    given-names: Davi Nunes
+  - family-names: Goulart dos Reis
+    given-names: Josué Carlos
+  - family-names: Batista Moreira
+    given-names: Luiz Fernando
+  - family-names: Tavares
+    given-names: Matheus Henrique
+  - family-names: de Oliveira Soares
+    given-names: Nicolas Kiffer 
+  - name-suffix: Professora
+    affiliation: PUC Minas
+    family-names: Alonso Veloso
+    given-names: Eveline
+  - name-suffix: Professora
+    affiliation: PUC Minas
+    family-names: Baroni De Carvalho
+    given-names: Juliana Amaral
+keywords:
+  - Roupa
+  - Reutilizar
+  - Reusar
+repository-code: https://github.com/ICEI-PUC-Minas-PMGES-TI/pmg-es-2025-1-ti2-3687100-brecho-re-use.git
+license: CC-BY-4.0
+version: 1.0.0
+date-released: 2025-06-24    
+ 
