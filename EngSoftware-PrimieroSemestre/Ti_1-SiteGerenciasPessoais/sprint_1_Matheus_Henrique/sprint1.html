@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Categorizar Gastos</title>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="stylesheet" href="sprint1.css">
+</head>
+
+<body>
+    <header class="superio">
+        <button class="botao">← VOLTAR</button>
+        <div class="nome">
+            <p>Olá! <strong>Thiago Motta</strong></p>
+        </div>
+        <div class="logo">
+            <h1>horizonte Financeiro</h1>
+        </div>
+    </header>
+
+    <section class="dashboard">
+        <div class="grafico">
+            <div class="tamanho">
+                <h2>Visão Geral</h2>
+                <canvas id="gastosChart"></canvas>
+            </div>
+
+        </div>
+
+        <div class="selecionar">
+            <label for="period">Selecione o Período:</label>
+            <select id="period" class="meses">
+                <option value="anual">Anual</option>
+                <option value="mensal">Mensal</option>
+                <option value="diario">Diário</option>
+            </select>
+        </div>
+
+        <div class="gastos">
+            <h3>Gastos</h3>
+            <ul>
+                <li id="Assinaturas"><strong>Assinaturas:</strong> <span>R$ 500,00</span></li>
+                <li id="Lazer"><strong>Lazer:</strong> <span>R$ 2.000,00</span></li>
+                <li id="Alimentaçao"> <strong>Alimentação:</strong> <span>R$ 4.300,00</span></li>
+                <li id="cuidadospessoais"><strong>Cuidados pessoais:</strong> <span>R$ 3.500,00</span></li>
+            </ul>
+        </div>
+    </section>
+
+    <script src="sprint1.js"></script>
+</body>
+
+</html>

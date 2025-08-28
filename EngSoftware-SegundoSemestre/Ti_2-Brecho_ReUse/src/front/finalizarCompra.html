@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Escolha de Pagamento</title>
+  <link rel="stylesheet" href="assets/css/finalizarCompra.css" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+  
+</head>
+<body>
+ <header class="header">
+  <div class="header-top">
+    <div class="logo">
+      <img src="assets/img/Logo-ReUse.png" alt="Logo ReUse" />
+    </div>
+  </div>
+
+  <div class="header-bottom">
+    <nav class="nav">
+      <ul class="nav-links">
+        <li><a href="Home-Page.html">Home</a></li>
+        <li><a href="consultaPeca.html">Adicionar Peça</a></li>
+        <li><a href="gerenciar_carrinho.html">Carrinho</a></li>
+        <li><a href="perfil.html">Perfil</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+  <main class="container">
+    <h1>Escolha seu método de pagamento</h1>
+
+    <div class="payment-option">
+      <label>
+        <input type="radio" name="pagamento" value="pix" onclick="togglePagamento('pix')" />
+        <strong>PIX</strong>
+      </label>
+      <div id="pix-fields" class="pagamento-campos hidden">
+        <p><strong>Tipo da chave:</strong> <span id="tipo-chave"></span></p>
+        <p><strong>Chave:</strong> <span id="chave-pix"></span></p>
+      </div>
+    </div>
+
+    <div class="payment-option">
+      <label>
+        <input type="radio" name="pagamento" value="cartao" onclick="togglePagamento('cartao')" />
+        <strong>Cartão de crédito</strong>
+      </label>
+      <div id="cartao-fields" class="pagamento-campos hidden">
+        <p><strong>Número:</strong> <span id="numero-cartao"></span></p>
+        <p><strong>Vencimento:</strong> <span id="vencimento-cartao"></span></p>
+        <p><strong>Nome:</strong> <span id="nome-cartao"></span></p>
+        <p><strong>CVV:</strong> <span id="cvv-cartao"></span></p>
+      </div>
+    </div>
+
+    <button class="finalizar">Finalizar compra</button>
+  </main>
+  <script src="./assets/js/finalizarCompra.js"></script>
+</body>
+</html>

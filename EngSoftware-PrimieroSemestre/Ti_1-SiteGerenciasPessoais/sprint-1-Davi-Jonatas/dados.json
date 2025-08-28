@@ -1,0 +1,18 @@
+{
+    "gastosRelatorio": {
+        "Julho/2024": {"media":600, "total":2300},
+        "Agosto/2024": {"media":300, "total":1450},
+        "Setembro/2024": { "media": 450, "total": 1650 },
+        "Outubro/2024": { "media": 900, "total": 2700 },
+        "Novembro/2024": { "media": 850, "total": 2900 },
+        "Dezembro/2024": { "media": 950, "total": 3100 }
+    },
+
+    "gastosSemanalRelatorio": {
+        "01/12/24 a 07/12/24": { "media": 75, "total": 500 },
+        "08/12/24 a 14/12/24": { "media": 50, "total": 450 },
+        "15/12/24 a 21/12/24": { "media": 150, "total": 700 },
+        "22/12/24 a 28/12/24": { "media": 125, "total": 650 },
+        "29/12/24 a 04/01/25": { "media": 190, "total": 900 }
+    }
+}

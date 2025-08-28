@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Dashboard - Re.use</title>
+  <link rel="stylesheet" href="assets/css/dashboard.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900&display=swap" rel="stylesheet">
+  <script defer src="assets/js/dashboard.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</head>
+<body>
+
+<header class="header">
+  <div class="header-top">
+    <div class="logo">
+      <img src="assets/img/Logo-ReUse.png" alt="Logo ReUse" />
+    </div>
+  </div>
+
+  <div class="header-bottom">
+    <nav class="nav">
+      <ul class="nav-links">
+        <li><a href="Home-Page.html">Home</a></li>
+        <li><a href="consultaPeca.html">Adicionar Peça</a></li>
+        <li><a href="gerenciar_carrinho.html">Carrinho</a></li>
+        <li><a href="perfil.html">Perfil</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main class="dashboard-main">
+  <h1>📊 Visão Geral da Plataforma</h1>
+  <p id="atualizacao" style="margin-top: -20px; font-size: 14px; color: #777;">Atualizando...</p>
+
+  <div class="dashboard-container">
+    <!-- Peças Vendidas -->
+    <div class="card-indicador">
+      <span class="icon">🧺</span>
+      <h2>Peças Vendidas</h2>
+      <p id="totalVendidas">...</p>
+    </div>
+
+    <!-- Total Arrecadado -->
+    <div class="card-indicador">
+      <span class="icon">💰</span>
+      <h2>Total Arrecadado</h2>
+      <p id="totalArrecadado">...</p>
+    </div>
+
+    <!-- Percentual Vendido -->
+    <div class="card-indicador">
+      <span class="icon">📈</span>
+      <h2>Percentual Vendido</h2>
+      <div class="progress-bar-wrapper">
+        <div class="progress-bar">
+          <div id="barraPercentual" class="progress-fill">
+            <span id="textoPercentual" class="progress-text">...</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Percentual Doado -->
+    <div class="card-indicador">
+      <span class="icon">🎁</span>
+      <h2>Percentual Doado</h2>
+      <div class="progress-bar-wrapper">
+        <div class="progress-bar">
+          <div id="barraDoado" class="progress-fill">
+            <span id="textoDoado" class="progress-text">...</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 💳 Ticket Médio -->
+    <div class="card-indicador">
+      <span class="icon">💳</span>
+      <h2>Ticket Médio</h2>
+      <p id="ticketMedio">...</p>
+    </div>
+
+    <!-- 📊 Taxa de Conversão -->
+    <div class="card-indicador">
+      <span class="icon">📊</span>
+      <h2>Taxa de Conversão</h2>
+      <p id="taxaConversao">...</p>
+    </div>
+  </div>
+</main>
+
+</body>
+</html>

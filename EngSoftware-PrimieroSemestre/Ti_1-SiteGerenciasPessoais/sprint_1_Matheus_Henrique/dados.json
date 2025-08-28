@@ -1,0 +1,8 @@
+{
+  "gastos": [
+    { "categoria": "Alimentação", "valor": 4300 },
+    { "categoria": "Cuidados Pessoais", "valor": 3500 },
+    { "categoria": "Lazer", "valor": 2000 },
+    { "categoria": "Assinaturas", "valor": 500 }
+  ]
+}

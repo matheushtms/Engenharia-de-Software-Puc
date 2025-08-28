@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,400;0,700;1,200;1,800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/button.css">
+    <link rel="stylesheet" href="css/records.css">
+    <link rel="stylesheet" href="css/modal.css">
+    <script src="main.js" defer></script>
+    <title>Cadastro de Bancos</title>
+</head>
+<body>
+    <header>
+        <h1 class="header-title">Cadastro de Bancos</h1>
+    </header>
+    <main>
+        <!-- Botão para abrir o modal de cadastro -->
+        <button type="button" class="button blue mobile" id="cadastrarBanco">Cadastrar Banco</button>
+
+        <!-- Tabela para exibir os Bancos cadastrados -->
+        <table class="records" id="tabelaBancos">
+            <thead>
+                <tr>
+                    <th>Nome do Banco</th>
+                    <th>Agência</th>
+                    <th>Conta</th>
+                    <th>Tipo de Conta</th>
+                    <th>CashBack (%)</th>
+                    <th>Ação</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Os dados dos bancos serão gerados dinamicamente aqui com JavaScript -->
+            </tbody>
+        </table>
+
+        <!-- Modal para cadastro e edição de banco -->
+        <div class="modal" id="modal">
+            <div class="modal-content">
+                <header class="modal-header">
+                    <h2>Novo Banco</h2>
+                    <span class="modal-close" id="modalClose">&#10006;</span>
+                </header>
+                <form class="modal-form" id="formBanco">
+                    <select id="nomeBanco" class="modal-field" required>
+                        <option value="">Selecione o Banco</option>
+                        <option value="Nubank"><img src="img/nubanklogo.png" alt="Logo Nubank" style="width: 20px; height: 20px; margin-right: 10px; vertical-align: middle;">Nubank</option>
+                        <option value="Mercado Pago"><img src="img/mercadopagologo.png" alt="Logo Mercado Pago" style="width: 20px; height: 20px; margin-right: 10px; vertical-align: middle;">Mercado Pago</option>
+                        <option value="Paypal"><img src="img/paypallogo.png" alt="Logo Paypal" style="width: 20px; height: 20px; margin-right: 10px; vertical-align: middle;">Paypal</option>
+                        <option value="Banco Inter"><img src="img/bancointerlogo.png" alt="Logo Banco Inter" style="width: 20px; height: 20px; margin-right: 10px; vertical-align: middle;">Banco Inter</option>
+                        <option value="Caixa"><img src="img/caixalogo.jpg" alt="Logo Caixa" style="width: 20px; height: 20px; margin-right: 10px; vertical-align: middle;">Caixa</option>
+                        <option value="Stone"><img src="img/stonelogo.png" alt="Logo Stone" style="width: 20px; height: 20px; margin-right: 10px; vertical-align: middle;">Stone</option>
+                        <option value="Bradesco"><img src="img/bradescologo.png" alt="Logo Bradesco" style="width: 20px; height: 20px; margin-right: 10px; vertical-align: middle;">Bradesco</option>
+                        <option value="Itaú Unibanco"><img src="img/itaulogo.png" alt="Logo Itaú Unibanco" style="width: 20px; height: 20px; margin-right: 10px; vertical-align: middle;">Itaú Unibanco</option>
+                        <option value="Santander"><img src="img/santanderlogo.png" alt="Logo Santander" style="width: 20px; height: 20px; margin-right: 10px; vertical-align: middle;">Santander</option>
+                        <option value="Banco do Brasil"><img src="img/bancodobrasil.png" alt="Logo Banco do Brasil" style="width: 20px; height: 20px; margin-right: 10px; vertical-align: middle;">Banco do Brasil</option>
+                        <option value="PicPay"><img src="img/picpaylogo.png" alt="Logo PicPay" style="width: 20px; height: 20px; margin-right: 10px; vertical-align: middle;">PicPay</option>
+                        <option value="PagBank"><img src="img/pagbanklogo.png" alt="Logo PagBank" style="width: 20px; height: 20px; margin-right: 10px; vertical-align: middle;">PagBank</option>
+                    </select>
+                    <input type="text" id="agencia" class="modal-field" placeholder="Agência" required>
+                    <input type="text" id="conta" class="modal-field" placeholder="Número da Conta" required>
+                    <select id="tipoConta" class="modal-field" required>
+                        <option value="">Tipo de Conta</option>
+                        <option value="Corrente">Conta Corrente</option>
+                        <option value="Poupanca">Conta Poupança</option>
+                    </select>
+                    <input type="number" id="cashBack" class="modal-field" placeholder="CashBack (%)" min="0" max="100" required>
+                </form>
+                <footer class="modal-footer">
+                    <button type="button" class="button green" id="salvarBanco">Salvar</button>
+                    <button type="button" class="button blue" id="cancelarBanco">Cancelar</button>
+                </footer>
+            </div>
+        </div>
+    </main>
+    <footer>
+        Copyright &copy; Gerenciar Finanças Pessoais
+    </footer>
+</body>
+</html>

@@ -1,0 +1,466 @@
+body {
+  margin: 0;
+  font-family: 'Montserrat', serif;
+  background-color: #f8f6f0;
+  color: #2b2b2b;
+  display: flex;
+  flex-direction: column;
+  overflow-x: hidden;
+  max-width: 100vw;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  overflow-x: hidden;
+}
+
+/* === HEADER === */
+.header {
+  font-family: 'Montserrat', sans-serif;
+  width: 100%;
+}
+
+.header-top {
+  width: 100%;
+  height: 140px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #394725;
+  border-bottom: 1px solid black;
+}
+
+.logo img {
+  width: 115px;
+  height: 120px;
+}
+
+.header-bottom {
+  width: 100%;
+  height: 40px;
+  background-color: #394725;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.nav {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  padding: 0 100px;
+}
+
+.nav-links {
+  display: flex;
+  gap: 230px;
+}
+
+.nav-links li {
+  list-style-type: none;
+}
+
+.nav-links li a {
+  font-size: 15px;
+  font-weight: bold;
+  color: white;
+  text-decoration: none;
+  transition: color 0.3s ease, transform 0.3s;
+}
+
+.nav-links li a:hover {
+  color: #a5d6a7;
+  transform: scale(1.1);
+}
+
+/* === MAIN & SEARCH === */
+
+main {
+  flex: 1;
+  padding: 20px;
+}
+
+.search-container {
+  margin-bottom: 20px !important;
+  width: 100%;
+  padding: 10px 0 20px;
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  flex-wrap: wrap;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.search-container input,
+.search-container select,
+.search-container button {
+  flex: 1 1 150px;
+  min-width: 150px;
+  max-width: 280px;
+  padding: 10px 14px;
+  border: 1px solid #ccc;
+  border-radius: 24px;
+  font-size: 16px;
+  font-family: 'Montserrat', serif;
+  background-color: #fff;
+  transition: border-color 0.3s ease;
+  box-sizing: border-box;
+}
+
+.search-container input:focus,
+.search-container select:focus,
+.search-container button:focus {
+  outline: none;
+  border-color: #394725;
+}
+
+.search-container button {
+  max-width: 140px;
+  background-color: #394725;
+  color: white;
+  cursor: pointer;
+  font-weight: 600;
+  transition: background-color 0.3s ease;
+  flex: 0 0 auto;
+}
+
+.search-container button:hover {
+  background-color: #2f3b22;
+}
+
+
+@media (max-width: 768px) {
+  .search-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .search-container input,
+  .search-container select,
+  .search-container button {
+    width: 90%;
+    max-width: none;
+    min-width: auto;
+  }
+
+  .search-container button {
+    max-width: none;
+    flex: none;
+  }
+}
+
+
+/* === CARD LIST === */
+
+.card-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: flex-start;
+  padding-left: 20px;
+}
+
+.card {
+  width: 330px;
+  background-color: #ffffff;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.15);
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  font-family: 'Montserrat', serif;
+}
+
+.card-img {
+  height: 180px;
+  background-color: #f0f0f0;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card-img img {
+  max-height: 160px;
+  max-width: 100%;
+  object-fit: cover;
+}
+
+/* === BOTÕES NOS CARDS === */
+
+.card-actions {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.ordenar-btn,
+.edit-btn,
+.delete-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  position: absolute;
+  pointer-events: all;
+  padding: 4px;
+}
+
+.ordenar-btn {
+  top: 10px;
+  left: 10px;
+}
+
+.edit-btn {
+  top: 10px;
+  right: 10px;
+}
+
+.delete-btn {
+  bottom: 10px;
+  right: 10px;
+}
+
+.delete-btn img,
+.edit-btn img,
+.ordenar-btn img {
+  width: 20px;
+  height: 20px;
+}
+
+/* === MENU DE OPÇÕES (VENDA / DOAÇÃO) === */
+
+.ordem-menu {
+  display: none;
+  flex-direction: column;
+  position: absolute;
+  top: 40px;
+  left: 10px;
+  background-color: #e0e0e0;
+  border-radius: 4px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+  z-index: 10;
+  min-width: 130px;
+  border: 1px solid #ccc;
+}
+
+.ordem-menu button {
+  padding: 16px;
+  border: none;
+  background: none;
+  border-bottom: 1px solid #bbb;
+  font-size: 16px;
+  text-align: center;
+  font-family: 'Montserrat', serif;
+  cursor: pointer;
+}
+
+.ordem-menu button:last-child {
+  border-bottom: none;
+}
+
+
+/* === CARD BODY === */
+
+.card-body {
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 4px;
+}
+
+.card-body h3 {
+  font-size: 1.2rem;
+  margin: 0 0 8px;
+}
+
+.card-body p {
+  font-size: 0.8m;
+  margin: 0;
+}
+
+/* === FLOATING BUTTON === */
+
+.floating-btn {
+  position: fixed;
+  bottom: 60px;
+  right: 60px;
+  background-color: transparent;
+  border: none;
+  padding: 0;
+  box-shadow: none;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.floating-btn:hover {
+  transform: scale(1.1);
+}
+
+.floating-btn img {
+  width: 47px;
+  height: 47px;
+}
+
+.swal2-popup {
+  overflow-x: hidden !important;
+  max-width: 90vw;
+}
+
+.swal2-icon {
+  overflow: hidden !important;
+}
+
+.swal2-success-circular-line-left,
+.swal2-success-circular-line-right {
+  display: none !important;
+}
+
+.status-label {
+  display: inline-block;
+  margin-top: 6px;
+  padding: 4px 10px;
+  border-radius: 8px;
+  font-size: 0.85rem;
+  font-weight: bold;
+  color: white;
+  background-color: gray;
+}
+
+.status-label.vendida {
+  background-color: #c0392b;
+}
+
+.status-label.doada {
+  background-color: #16a085;
+}
+
+
+
+/* === RESPONSIVO === */
+  @media (max-width: 768px) {
+
+    .header-top {
+    height: 100px;
+  }
+  .logo img {
+    width: 75px;
+    height: 80px;
+  }
+
+  .header-bottom {
+    height: auto;
+    padding: 10px;
+  }
+
+    .header-bottom {
+        width: 100%;
+    }
+
+    .nav-links {
+        flex-direction: column;
+        gap: 20px; 
+    }
+
+    .nav-links li {
+        font-size: 18px;
+    }
+    
+  .card-container {
+    justify-content: center;
+    padding-left: 0;
+  }
+
+  .card {
+    width: 90%;
+  }
+
+  .search-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .search-container input,
+  .search-container button {
+    width: 90%;
+    max-width: 100%;
+  }
+
+  .nav-links {
+    flex-direction: column;
+    gap: 15px;
+    align-items: center;
+  }
+
+  .nav-links li a {
+    font-size: 15px;
+  }
+
+  .floating-btn {
+    bottom: 20px;
+    right: 20px;
+  }
+
+  .card-img img {
+    max-height: 140px;
+  }
+
+  .card-body h3 {
+    font-size: 1rem;
+  }
+
+  .card-body p {
+    font-size: 0.9rem;
+  }
+
+@media (max-width: 480px) {
+
+
+  .nav {
+    padding: 0 20px;
+  }
+
+  .ordenar-btn,
+  .edit-btn,
+  .delete-btn {
+    padding: 6px;
+  }
+
+  .ordem-menu button {
+    padding: 12px;
+    font-size: 14px;
+  }
+
+  .card-body {
+    padding: 12px;
+    gap: 2px;
+  }
+}
+
+
+/* === SCROLLBAR === */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #e0e0e0;
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #3e4b2d;
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: #2f3b22;
+}
+  }

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Perfil do Usuário</title>
+  <link rel="stylesheet" href="assets/css/perfil.css" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    
+  <script src="assets/js/perfil.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</head>
+<body>
+<header class="header">
+  <div class="header-top">
+    <div class="logo">
+      <img src="assets/img/Logo-ReUse.png" alt="Logo ReUse" />
+    </div>
+  </div>
+
+  <div class="header-bottom">
+    <nav class="nav">
+      <ul class="nav-links">
+        <li><a href="Home-Page.html">Home</a></li>
+        <li><a href="consultaPeca.html">Adicionar Peça</a></li>
+        <li><a href="gerenciar_carrinho.html">Carrinho</a></li>
+        <li><a href="perfil.html">Perfil</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+
+  <main class="perfil-container">
+    <div class="perfil-foto-container">
+      <img id="fotoPerfil" src="./assets/icons/icone-usuario-verificado.png" alt="Foto de Perfil" />
+      <button class="editar-btn" onclick="window.location.href='editar-perfil.html'">
+      <img src="assets/icons/icone-editar-preto.png" alt="Adicionar Peça" />
+    </button>
+    </div>
+
+
+    <form class="perfil-form">
+      <h2>Informações pessoais</h2>
+      <input type="email" id="email" placeholder="Email" disabled />
+      <input type="text" id="nome" placeholder="Nome" disabled />
+      <input type="text" id="cpf" placeholder="CPF" disabled />
+      <input type="date" id="dataNascimento" placeholder="Data de nascimento" disabled />
+      <input type="tel" id="telefone" placeholder="Telefone" disabled />
+
+      <h2>Endereço</h2>
+      <input type="text" id="cep" placeholder="CEP" disabled />
+      <input type="text" id="rua" placeholder="Endereço" disabled />
+      <input type="text" id="numero" placeholder="Número da residência" disabled />
+      <input type="text" id="complemento" placeholder="Complemento (opcional)" disabled />
+      <input type="text" id="bairro" placeholder="Bairro" disabled />
+      <input type="text" id="cidade" placeholder="Cidade" disabled />
+      <input type="text" id="estado" placeholder="Estado" disabled />
+    </form>
+
+<div class="acoes-container">
+  <button type="button" class="excluir-btn" onclick="excluirUsuario()">
+    <img src="./assets/icons/icone-lixeira-vermelha.png" alt="">Excluir usuário
+  </button>
+
+  <button id="adminDashboardBtn" onclick="window.location.href='dashboard.html'">
+    <img src="./assets/icons/icons8-métricas-de-laptop-50.png" alt="Dashboard">Acessar Dashboard Admin
+  </button>
+
+  <button type="button" class="logout-btn" onclick="logoutUsuario()">
+    <img src="./assets/icons/icone-logout.png" alt="Logout">Sair da conta
+  </button>
+</div>
+
+
+</main>
+</body>
+</html>

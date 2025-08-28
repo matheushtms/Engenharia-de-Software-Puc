@@ -1,0 +1,85 @@
+Usuario (
+  id_usuario INT PRIMARY KEY,
+  nome_completo VARCHAR(100),
+  email VARCHAR(100) UNIQUE,
+  senha VARCHAR(100),
+  cpf CHAR(11) UNIQUE,
+  data_nascimento DATE,
+  telefone VARCHAR(15),
+  cidade VARCHAR(50),
+  estado VARCHAR(50),
+  cep CHAR(8),
+  endereco VARCHAR(100),
+  numero_residencia VARCHAR(10),
+  complemento VARCHAR(50),
+  bairro VARCHAR(50),
+  chave_pix VARCHAR(100),
+  cartao_credito VARCHAR(100)
+)
+
+
+Peca (
+  id_peca INT PRIMARY KEY,
+  titulo VARCHAR(100),
+  descricao TEXT,
+  categoria VARCHAR(50),
+  tamanho VARCHAR(10),
+  cor VARCHAR(30),
+  conservacao ENUM('novo', 'seminovo', 'usado'),
+  preco DECIMAL(10,2),
+  imagem VARCHAR(255),
+  status ENUM('cadastrada', 'à venda', 'vendida', 'doada')
+)
+
+
+Peca (
+  id_peca INT PRIMARY KEY,
+  titulo VARCHAR(100),
+  descricao TEXT,
+  categoria VARCHAR(50),
+  tamanho VARCHAR(10),
+  cor VARCHAR(30),
+  conservacao ENUM('novo', 'seminovo', 'usado'),
+  preco DECIMAL(10,2),
+  imagem VARCHAR(255),
+  status ENUM('cadastrada', 'à venda', 'vendida', 'doada')
+)
+
+VendaBrecho (
+  id_venda_brecho INT PRIMARY KEY,
+  id_usuario INT,
+  id_peca INT,
+  tipo_transacao ENUM('doacao', 'venda'),
+  proposta_aprovada BOOLEAN,
+  numero_rastreamento VARCHAR(50),
+  data_envio DATETIME,
+  FOREIGN KEY (id_usuario) REFERENCES Usuario(id_usuario),
+  FOREIGN KEY (id_peca) REFERENCES Peca(id_peca)
+)
+
+VendaCliente (
+  id_venda_cliente INT PRIMARY KEY,
+  id_usuario INT,
+  data_venda DATETIME,
+  total DECIMAL(10,2),
+  endereco_entrega VARCHAR(150),
+  cep CHAR(8),
+  cidade VARCHAR(50),
+  estado VARCHAR(50),
+  numero_residencia VARCHAR(10),
+  complemento VARCHAR(50),
+  bairro VARCHAR(50),
+  metodo_pagamento ENUM('PIX', 'Cartao'),
+  status ENUM('aguardando envio', 'enviado', 'entregue'),
+  FOREIGN KEY (id_usuario) REFERENCES Usuario(id_usuario)
+)
+
+ItemVenda (
+  id_item_venda INT PRIMARY KEY,
+  id_venda_cliente INT,
+  id_peca INT,
+  quantidade INT,
+  preco_unitario DECIMAL(10,2),
+  FOREIGN KEY (id_venda_cliente) REFERENCES VendaCliente(id_venda_cliente),
+  FOREIGN KEY (id_peca) REFERENCES Peca(id_peca)
+)

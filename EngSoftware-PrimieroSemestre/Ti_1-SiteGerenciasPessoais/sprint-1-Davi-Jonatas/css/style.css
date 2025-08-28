@@ -1,0 +1,175 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #00aaff;
+    padding: 8px;
+    color: white;
+}
+
+.btn-voltar{
+    background: #0163a4;
+    border: none;
+    color: white;
+    cursor: pointer;
+    padding: 10px;
+    width: 90px;
+    border-radius: 8px;
+}
+
+.content {
+    display: flex;
+    justify-content: center;
+}
+
+
+
+.main-content {
+    width: 100%;
+    max-width: 1300px;
+    background-color: white;
+    padding: 15px;
+    border-radius: 5px;
+}
+
+.info {
+    display: flex;
+    justify-content: space-between;
+}
+
+.grafico {
+    width: 100% !important;
+    height: auto;
+    max-width: 100%;
+    height: 300px;
+}
+
+.relatorio {
+    margin-top: 20px;
+}
+
+.relatorio-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+td {
+    text-align: center;
+}
+
+.filtro {
+    position: relative;
+    display: inline-block;
+}
+
+.filtrobtn {
+    background-color: #fff;
+    color: black;
+    padding: 10px;
+    border: none;
+    
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+}
+
+.material-symbols-outlined {
+  font-variation-settings:
+  'FILL' 0,
+  'wght' 400,
+  'GRAD' 0,
+  'opsz' 24
+}
+
+.filtro-opcoes {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: -20px;
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    z-index: 1;
+    min-width: 50px;
+}
+
+.filtro:hover .filtro-opcoes {
+    display: block;
+}
+
+.filtro-opcoes button {
+    display: block;
+    padding: 10px;
+    width: 100%;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+    text-align: left;
+}
+
+.filtro-opcoes button:hover {
+    background-color: #f0f0f0;
+}
+
+.relatorio-content {
+    max-height: 200px;
+    overflow-y: auto;
+    border: 1px solid #ddd;
+    padding: 5px;
+}
+
+.relatorio-content::-webkit-scrollbar {
+    width: 8px;
+}
+
+.relatorio-content::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+.relatorio-content::-webkit-scrollbar-thumb {
+    background: #00aaff;
+}
+
+.relatorio-content::-webkit-scrollbar-thumb:hover {
+    background: #007acc;
+}
+
+table {
+    width: 100%;
+    margin-top: 15px;
+    border-collapse: collapse;
+}
+
+table, th, td {
+    border: 1px solid #ddd;
+    padding: 8px;
+}
+
+th {
+    background-color: #00aaff;
+    color: white;
+}
+
+@media (max-width: 768px) {
+    .content {
+        flex-direction: column;
+    }
+    
+    .main-content {
+        width: 100%;
+    }
+}

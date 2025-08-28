@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Finalizar Compra</title>
+  <link rel="stylesheet" href="assets/css/preencher_endereco.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</head>
+<body>
+
+<header class="header">
+  <div class="header-top">
+    <div class="logo">
+      <img src="assets/img/Logo-ReUse.png" alt="Logo ReUse" />
+    </div>
+  </div>
+  <div class="header-bottom">
+    <nav class="nav">
+      <ul class="nav-links">
+        <li><a href="Home-Page.html">Home</a></li>
+        <li><a href="consultaPeca.html">Adicionar Peça</a></li>
+        <li><a href="gerenciar_carrinho.html">Carrinho</a></li>
+        <li><a href="perfil.html">Perfil</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <h2 class="form-title">Finalizar Compra</h2>
+
+  <form id="formEnderecoPagamento" class="form-endereco">
+    <!-- Endereço -->
+    <section class="section-block">
+      <h3>Endereço de Entrega</h3>
+      <input type="text" id="cep" placeholder="CEP" required />
+      <input type="text" id="rua" placeholder="Rua" required />
+      <input type="text" id="numero" placeholder="Número" required />
+      <input type="text" id="complemento" placeholder="Complemento (opcional)" />
+      <input type="text" id="bairro" placeholder="Bairro" required />
+      <input type="text" id="cidade" placeholder="Cidade" required />
+      <input type="text" id="estado" placeholder="Estado" required />
+    </section>
+
+    <!-- Pagamento -->
+    <section class="section-block">
+      <h3>Método de Pagamento</h3>
+
+      <div class="payment-choice">
+        <button type="button" class="payment-btn" onclick="mostrarCamposPagamento('pix')">PIX</button>
+        <button type="button" class="payment-btn" onclick="mostrarCamposPagamento('cartao')">Cartão</button>
+      </div>
+
+      <input type="hidden" id="tipo-pagamento-selecionado" name="pagamento" />
+
+      <div id="pix-fields" class="pagamento-campos hidden">
+        <select id="tipo-chave">
+          <option disabled selected value="">Selecione</option>
+          <option value="email">Email</option>
+          <option value="cpf">CPF</option>
+          <option value="telefone">Telefone</option>
+        </select>
+        <input type="text" id="chave-pix" placeholder="Chave Pix" />
+      </div>
+
+      <div id="cartao-fields" class="pagamento-campos hidden">
+        <input type="text" id="numero-cartao" placeholder="Número do Cartão" />
+        <input type="text" id="vencimento-cartao" placeholder="Validade (MM/AA)" />
+        <input type="text" id="nome-cartao" placeholder="Nome no Cartão" />
+        <input type="text" id="cvv-cartao" placeholder="CVV" />
+      </div>
+    </section>
+
+    <button type="submit">Confirmar</button>
+  </form>
+</main>
+
+<script src="assets/js/preencher_endereco.js"></script>
+</body>
+</html>

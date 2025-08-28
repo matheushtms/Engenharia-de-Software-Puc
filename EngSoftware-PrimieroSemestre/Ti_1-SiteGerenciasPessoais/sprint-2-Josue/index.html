@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simulador e Cadastro de Investimentos</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <h1>Simulador e Cadastro de Investimentos</h1>
+        
+        <div class="form-section">
+            <h2>Cadastro de Investimento</h2>
+            <label for="valor">Valor Inicial (R$):</label>
+            <input type="number" id="valor" placeholder="Digite o valor inicial">
+
+            <label for="meses">Tempo de Investimento (meses):</label>
+            <input type="number" id="meses" placeholder="Ex: 12">
+
+            <label for="tipo_investimento">Tipo de Investimento:</label>
+            <select id="tipo_investimento">
+                <option value="cdb">CDB</option>
+                <option value="tesouro_direto">Tesouro Direto</option>
+                <option value="lci_lca">LCI/LCA</option>
+                <option value="outros">Outros</option>
+            </select>
+
+            <label for="taxa_personalizada">Taxa Personalizada (% ao ano):</label>
+            <input type="number" id="taxa_personalizada" placeholder="Ex: 8.5">
+
+            <div class="button-container">
+                <button onclick="cadastrarInvestimento()">Cadastrar</button>
+                <button onclick="simularInvestimento()">Simular</button>
+            </div>
+        </div>
+
+        <div id="resultado" class="resultado"></div>
+
+        <h2>Histórico de Investimentos</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Tipo</th>
+                    <th>Valor Inicial (R$)</th>
+                    <th>Meses</th>
+                    <th>Montante Final (R$)</th>
+                    <th>Rendimento (R$)</th>
+                    <th>Ações</th>
+                </tr>
+            </thead>
+            <tbody id="historico">
+                <!-- Histórico de investimentos será inserido aqui -->
+            </tbody>
+        </table>
+        <button onclick="exportarCSV()">Exportar Histórico para CSV</button>
+        <canvas id="graficoRendimentos" width="600" height="300"></canvas>
+    </div>
+    
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

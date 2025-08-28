@@ -1,0 +1,197 @@
+body {
+  font-family: 'Montserrat', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f4;
+}
+
+.header {
+  font-family: 'Montserrat', serif;
+  width: 100%;
+}
+
+.header-top {
+  width: 100%;
+  height: 140px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #394725;
+  border-bottom: 1px solid black;
+}
+
+.logo img {
+  width: 115px;
+  height: 120px;
+}
+
+.header-bottom {
+  width: 100%;
+  height: 40px;
+  background-color: #394725;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.nav {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  padding: 0 100px;
+}
+
+.nav-links {
+  display: flex;
+  gap: 230px;
+}
+
+.nav-links li {
+  list-style-type: none;
+}
+
+.nav-links li a {
+  color: white;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: bold;
+  transition: color 0.3s ease, transform 0.3s;
+}
+
+.nav-links li a:hover {
+  color: #a5d6a7;
+  transform: scale(1.1);
+}
+
+@media (max-width: 1024px) {
+  .nav {
+    padding: 0 50px;
+  }
+  .nav-links {
+    gap: 120px;
+  }
+}
+
+@media (max-width: 768px) {
+  .header-top {
+    height: 100px;
+  }
+
+  .logo img {
+    width: 75px;
+    height: 80px;
+  }
+
+  .header-bottom {
+    height: auto;
+    padding: 10px;
+    width: 100%;
+  }
+
+  .nav-links {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .nav-links li {
+    font-size: 18px;
+  }
+
+  .nav {
+    padding: 0 30px;
+  }
+}
+
+@media (max-width: 480px) {
+  .nav-links {
+    gap: 15px;
+  }
+
+  .nav-links li a {
+    font-size: 16px;
+  }
+}
+
+.dashboard-main {
+  padding: 30px 20px;
+  text-align: center;
+}
+
+.dashboard-main h1 {
+  font-size: 28px;
+  margin-bottom: 40px;
+  color: #333;
+}
+
+.dashboard-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.card-indicador {
+  background-color: #fff;
+  border-left: 5px solid #5b7c5d;
+  border-radius: 12px;
+  padding: 20px 30px;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
+  width: 280px;
+  transition: transform 0.2s ease-in-out;
+}
+
+.card-indicador:hover {
+  transform: scale(1.02);
+}
+
+.card-indicador .icon {
+  font-size: 32px;
+  display: block;
+  margin-bottom: 10px;
+}
+
+.card-indicador h2 {
+  font-size: 18px;
+  margin: 5px 0;
+  color: #444;
+}
+
+.card-indicador p {
+  font-size: 26px;
+  font-weight: bold;
+  color: #2e2e2e;
+  margin-top: 8px;
+}
+
+.progress-bar-wrapper {
+  margin-top: 10px;
+  position: relative;
+}
+
+.progress-bar {
+  width: 100%;
+  background-color: #e6e6e6;
+  border-radius: 20px;
+  overflow: hidden;
+  height: 20px;
+  border: 1px solid #ccc;
+}
+
+.progress-fill {
+  height: 100%;
+  width: 0%;
+  border-radius: 20px 0 0 20px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  padding-right: 10px;
+  transition: width 0.6s ease-in-out, background-color 0.3s ease-in-out;
+}
+
+.progress-text {
+  font-size: 13px;
+  color: white;
+  font-weight: bold;
+}
+
+

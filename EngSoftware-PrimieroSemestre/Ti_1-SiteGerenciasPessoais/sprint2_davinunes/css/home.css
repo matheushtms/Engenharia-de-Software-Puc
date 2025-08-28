@@ -1,0 +1,248 @@
+
+* {
+    margin: 0;
+    padding: 5px;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f9;
+    color: #333;
+    line-height: 1.6;
+    overflow-x: hidden;
+    padding: 20px;
+    overflow-x: hidden;
+}
+body, html {
+    overflow-x: hidden; 
+    width: 100%; 
+   
+  
+}
+
+#wrapper {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+
+header.superio {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #007bb5;
+    color: white;
+    padding: 15px 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+    border-radius: 8px;
+}
+
+header h1 {
+    font-size: 1.8rem;
+    margin: 0;
+}
+
+header h2 {
+    font-size: 1.2rem;
+    margin: 0;
+}
+
+.superio button {
+    background-color: white;
+    color: #007bb5;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.superio button:hover {
+    background-color: #005f8c;
+    color: white;
+}
+
+
+#logoimg {
+    text-align: center;
+    margin: 20px 0;
+}
+
+#logoimg img {
+    width: 100%;
+    max-width: 600px;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+#logoimg p {
+    margin-top: 10px;
+    font-size: 1rem;
+    color: #555;
+}
+
+
+.section {
+    background-color: rgb(255, 255, 255);
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+  border: solid rgb(82, 9, 209);
+}
+.section:hover {
+    background-color: #c9ddf3;
+    transform: scale(1.02);
+}
+
+.section h2 {
+    font-size: 1.5rem;
+    color: #007bb5;
+    margin-bottom: 15px;
+}
+
+.section p, .section ul {
+    margin: 10px 0;
+    color: #555;
+}
+
+ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+ul li {
+    position: relative;
+    padding-left: 25px;
+    margin-bottom: 5px;
+}
+
+ul li:before {
+    content: '✓';
+    color: #28a745;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+
+.button, .button-green {
+    display: inline-block;
+    background-color: #007bff;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 1rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.button-green {
+    background-color: #28a745;
+}
+
+.button:hover, .button-green:hover {
+    background-color: #0056b3;
+    transform: scale(1.05);
+}
+
+.button-green:hover {
+    background-color: #1e7e34;
+}
+
+
+.coupon, .product {
+    background-color: #e9f7ff;
+    padding: 15px;
+    border-radius: 8px;
+    margin-top: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.product {
+    background-color: #0949af85;
+  
+    
+}
+
+.coupon h2, .product h2 {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+} 
+
+@media (max-width: 768px) {
+   
+    body {
+        padding: 10px;
+    }
+
+    header.superio {
+      
+        text-align: center;
+        padding: 20px;
+    }
+
+    header h1 {
+        font-size: 1.5rem;
+        margin-bottom: 10px;
+    }
+
+    .superio button {
+     
+        max-width: 200px;
+        margin: 10px auto;
+    }
+
+    #logoimg img {
+        max-width: 100%;
+    }
+
+    .section {
+        padding: 15px;
+    }
+
+    .section h2 {
+        font-size: 1.3rem;
+    }
+
+    .button, .button-green {
+        font-size: 0.9rem;
+        padding: 8px 15px;
+        width: 100%;
+        max-width: 200px;
+        margin: 10px auto;
+    }
+}
+
+@media (max-width: 480px) {
+    
+    header h1 {
+        font-size: 1.2rem;
+      
+    }
+
+    .section h2 {
+        font-size: 1.2rem;
+    }
+
+    ul li {
+        padding-left: 20px;
+    }
+
+    ul li:before {
+        font-size: 0.9rem;
+    }
+
+    .button, .button-green {
+        padding: 8px;
+        font-size: 0.8rem;
+    }
+}

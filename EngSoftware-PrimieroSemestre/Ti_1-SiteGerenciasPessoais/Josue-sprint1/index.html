@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Novo Objetivo</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="index.html" class="logo">MetaPro</a>
+            <a href="metas-salvas.html" class="nav-link">Ver Metas Salvas</a>
+        </nav>
+    </header>
+
+    <div class="container">
+        <h1>Cadastre um novo objetivo</h1>
+        <form id="goal-form">   
+            <label for="nome-objetivo">Nome do objetivo</label>
+            <input type="text" id="nome-objetivo" placeholder="Ex: Nova casa" required/>
+
+            <label for="data-objetivo">Data de Conclusão</label>
+            <input type="date" id="data-objetivo" required/>
+
+            <label>Ícone do Objetivo</label>
+            <div class="icons" id="icon-selection">
+                <button type="button" data-icon="casa.webp"><img src="casa.webp" alt="Casa" /></button>
+                <button type="button" data-icon="livro.jpg"><img src="livro.jpg" alt="Livro" /></button>
+                <button type="button" data-icon="dinheiro.jpg"><img src="dinheiro.jpg" alt="Dinheiro" /></button>
+                <button type="button" data-icon="outros.png" class="outros">OUTROS</button>
+            </div>
+
+            <label for="descricao">Descrição</label>
+            <textarea id="descricao" placeholder="Detalhe seu objetivo..." required></textarea>
+
+            <label for="valor-objetivo">Valor do Objetivo</label>
+            <input type="text" id="valor-objetivo" placeholder="Ex: R$ 500.000,00" required/>
+
+            <label for="valor-inicial">Valor Inicial</label>
+            <input type="text" id="valor-inicial" placeholder="Ex: R$ 10.000,00" required/>
+
+            <button type="submit" class="save-button">SALVAR</button>
+        </form>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

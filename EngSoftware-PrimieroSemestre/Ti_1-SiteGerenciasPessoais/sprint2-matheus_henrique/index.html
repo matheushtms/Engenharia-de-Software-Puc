@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="cashback" content="Geral">
+    <title>Ofertas de Cashback</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <script src="script.js"></script>
+
+    <div class="botao-de-voltar">
+        <button class="back-button" onclick="window.location.href = '../index.html';">← Voltar para a Tela Inicial</button>
+    </div>
+
+    <div class="container">
+        <h2>Ofertas de Cashback</h2>
+
+        <div class="tab">
+            <button class="tab-botao active" onclick="showTab('sapatos')">Sapatos</button>
+            <button class="tab-botao" onclick="showTab('roupas')">Roupas</button>
+            <button class="tab-botao" onclick="showTab('eletronicos')">Eletrônicos</button>
+            <button class="tab-botao" onclick="showTab('supermercado')">Supermercado</button>
+            <button class="tab-botao" onclick="showTab('combustivel')">Combustível</button>
+            <button class="tab-botao" onclick="showTab('viagens')">Viagens</button>
+            <button class="tab-botao" onclick="showTab('livros')">Livros</button>
+            <button class="tab-botao" onclick="showTab('cinema')">Cinema</button>
+            <button class="tab-botao" onclick="showTab('academias')">Academias</button>
+            <button class="tab-botao" onclick="showTab('fastfood')">Fast Food</button>
+            <button class="tab-botao" onclick="showTab('cadastro')">Cadastrar Cashback</button>
+
+        </div>
+        <div id="cadastro" class="tab-content">
+            <h3>Cadastrar Nova Oferta de Cashback</h3>
+            <form id="cadastro-form" onsubmit="cadastrarCashback(event)">
+                <label for="categoria">Categoria:</label>
+                <select id="categoria" required>
+                    <option value="sapatos">Sapatos</option>
+                    <option value="roupas">Roupas</option>
+                    <option value="eletronicos">Eletrônicos</option>
+                    <option value="supermercado">Supermercado</option>
+                    <option value="combustivel">Combustível</option>
+                    <option value="viagens">Viagens</option>
+                    <option value="livros">Livros</option>
+                    <option value="cinema">Cinema</option>
+                    <option value="academias">Academias</option>
+                    <option value="fastfood">Fast Food</option>
+                </select>
+        
+                <label for="banco">Banco:</label>
+                <input type="text" id="banco" placeholder="Nome do Banco" required>
+        
+                <label for="cashback">Cashback (%):</label>
+                <input type="number" id="cashback" placeholder="Exemplo: 5" min="0" required>
+        
+                <label for="imagem">URL da Imagem:</label>
+                <input type="url" id="imagem" placeholder="Link para a imagem do banco" required>
+        
+                <button type="submit">Cadastrar</button>
+            </form>
+        </div>
+
+        <div id="sapatos" class="tab-content active">
+            <h3>Cashback em Sapatos</h3>
+            <label for="bancos-sapatos">Escolha seu banco:</label>
+            <select id="bancos-sapatos" class="bank-selector" onchange="filterBanks('sapatos')">
+                <option value="all">Todos</option>
+                <option value="inter">Banco Inter</option>
+                <option value="picpay">PicPay</option>
+                <option value="c6bank">C6 Bank</option>
+                <option value="nubank">Nubank</option>
+            </select>
+            <div class="cashback-info" id="sapatos-cashback-info">
+                <div class="bank-card" data-bank="inter">
+                    <img src="./fotos/inter.jpg" alt="Banco Inter">
+                    <p>Banco Inter</p>
+                    <span class="cashback">5% Cashback</span>
+                </div>
+                <div class="bank-card" data-bank="picpay">
+                    <img src="./fotos/PicPay.png" alt="PicPay">
+                    <p>PicPay</p>
+                    <span class="cashback">4% Cashback</span>
+                </div>
+                <div class="bank-card" data-bank="c6bank">
+                    <img src="./fotos/c6-bank.png" alt="C6 Bank">
+                    <p>C6 Bank</p>
+                    <span class="cashback">2% Cashback</span>
+                </div>
+                <div class="bank-card" data-bank="nubank">
+                    <img src="./fotos/nubank.png" alt="Nubank">
+                    <p>Nubank</p>
+                    <span class="cashback">3% Cashback</span>
+                </div>
+            </div>
+        </div>
+
+
+
+        <div id="roupas" class="tab-content active">
+            <h3>Cashback em Sapatos</h3>
+            <label for="bancos-roupas">Escolha seu banco:</label>
+            <select id="bancos-roupas" class="bank-selector" onchange="filterBanks('roupas')">
+                <option value="all">Todos</option>
+                <option value="inter">Banco Inter</option>
+                <option value="picpay">PicPay</option>
+                <option value="c6bank">C6 Bank</option>
+                <option value="nubank">Nubank</option>
+            </select>
+            <div class="cashback-info" id="roupas-cashback-info">
+                <div class="bank-card" data-bank="inter">
+                    <img src="./fotos/inter.jpg" alt="Banco Inter">
+                    <p>Banco Inter</p>
+                    <span class="cashback">3% Cashback</span>
+                </div>
+                <div class="bank-card" data-bank="picpay">
+                    <img src="./fotos/PicPay.png" alt="PicPay">
+                    <p>PicPay</p>
+                    <span class="cashback">7% Cashback</span>
+                </div>
+                <div class="bank-card" data-bank="c6bank">
+                    <img src="./fotos/c6-bank.png" alt="C6 Bank">
+                    <p>C6 Bank</p>
+                    <span class="cashback">6% Cashback</span>
+                </div>
+                <div class="bank-card" data-bank="nubank">
+                    <img src="./fotos/nubank.png" alt="Nubank">
+                    <p>Nubank</p>
+                    <span class="cashback">1% Cashback</span>
+                </div>
+            </div>
+        </div>
+
+
+        <div id="eletronicos" class="tab-content">
+            <h3>Cashback em Eletrônicos</h3>
+            <label for="bancos-eletronicos">Escolha seu banco:</label>
+            <select id="bancos-eletronicos" class="bank-selector" onchange="filterBanks('eletronicos')">
+                <option value="all">Todos</option>
+                <option value="inter">Banco Inter</option>
+                <option value="picpay">PicPay</option>
+                <option value="c6bank">C6 Bank</option>
+                <option value="nubank">Nubank</option>
+            </select>
+            <div class="cashback-info" id="eletronicos-cashback-info">
+                <div class="bank-card" data-bank="inter">
+                    <img src="./fotos/inter.jpg" alt="Banco Inter">
+                    <p>Banco Inter</p>
+                    <span class="cashback">5% Cashback</span>
+                </div>
+                <div class="bank-card" data-bank="picpay">
+                    <img src="./fotos/PicPay.png" alt="PicPay">
+                    <p>PicPay</p>
+                    <span class="cashback">4% Cashback</span>
+                </div>
+                <div class="bank-card" data-bank="c6bank">
+                    <img src="./fotos/c6-bank.png" alt="C6 Bank">
+                    <p>C6 Bank</p>
+                    <span class="cashback">1.5% Cashback</span>
+                </div>
+                <div class="bank-card" data-bank="nubank">
+                    <img src="./fotos/nubank.png" alt="Nubank">
+                    <p>Nubank</p>
+                    <span class="cashback">3% Cashback</span>
+                </div>
+            </div>
+        </div>
+
+
+        <div id="supermercado" class="tab-content">
+            <h3>Cashback em Supermercado</h3>
+            <label for="bancos-supermercado">Escolha seu banco:</label>
+            <select id="bancos-supermercado" class="bank-selector" onchange="filterBanks('supermercado')">
+                <option value="all">Todos</option>
+                <option value="inter">Banco Inter</option>
+                <option value="picpay">PicPay</option>
+                <option value="c6bank">C6 Bank</option>
+                <option value="nubank">Nubank</option>
+            </select>
+            <div class="cashback-info" id="supermercado-cashback-info">
+                <div class="bank-card" data-bank="inter">
+                    <img src="./fotos/inter.jpg" alt="Banco Inter">
+                    <p>Banco Inter</p>
+                    <span class="cashback">3% Cashback</span>
+                </div>
+                <div class="bank-card" data-bank="picpay">
+                    <img src="./fotos/PicPay.png" alt="PicPay">
+                    <p>PicPay</p>
+                    <span class="cashback">2% Cashback</span>
+                </div>
+                <div class="bank-card" data-bank="c6bank">
+                    <img src="./fotos/c6-bank.png" alt="C6 Bank">
+                    <p>C6 Bank</p>
+                    <span class="cashback">8% Cashback</span>
+                </div>
+                <div class="bank-card" data-bank="nubank">
+                    <img src="./fotos/nubank.png" alt="Nubank">
+                    <p>Nubank</p>
+                    <span class="cashback">4% Cashback</span>
+                </div>
+            </div>
+        </div>
+
+
+        <div id="combustivel" class="tab-content">
+            <h3>Cashback em Combustível</h3>
+            <label for="bancos-combustivel">Escolha seu banco:</label>
+            <select id="bancos-combustivel" class="bank-selector" onchange="filterBanks('combustivel')">
+                <option value="all">Todos</option>
+                <option value="inter">Banco Inter</option>
+                <option value="picpay">PicPay</option>
+                <option value="c6bank">C6 Bank</option>
+                <option value="nubank">Nubank</option>
+            </select>
+            <div class="cashback-info" id="combustivel-cashback-info">
+                <div class="bank-card" data-bank="inter">
+                    <img src="./fotos/inter.jpg" alt="Banco Inter">
+                    <p>Banco Inter</p>
+                    <span class="cashback">5% Cashback</span>
+                </div>
+                <div class="bank-card" data-bank="picpay">
+                    <img src="./fotos/PicPay.png" alt="PicPay">
+                    <p>PicPay</p>
+                    <span class="cashback">2% Cashback</span>
+                </div>
+                <div class="bank-card" data-bank="c6bank">
+                    <img src="./fotos/c6-bank.png" alt="C6 Bank">
+                    <p>C6 Bank</p>
+                    <span class="cashback">3% Cashback</span>
+                </div>
+                <div class="bank-card" data-bank="nubank">
+                    <img src="./fotos/nubank.png" alt="Nubank">
+                    <p>Nubank</p>
+                    <span class="cashback">1% Cashback</span>
+                </div>
+            </div>
+        </div>
+
+
+        <div id="viagens" class="tab-content">
+            <h3>Cashback em Viagens</h3>
+            <label for="bancos-viagens">Escolha seu banco:</label>
+            <select id="bancos-viagens" class="bank-selector" onchange="filterBanks('viagens')">
+                <option value="all">Todos</option>
+                <option value="inter">Banco Inter</option>
+                <option value="picpay">PicPay</option>
+                <option value="c6bank">C6 Bank</option>
+                <option value="nubank">Nubank</option>
+            </select>
+            <div class="cashback-info" id="viagens-cashback-info">
+                <div class="bank-card" data-bank="inter">
+                    <img src="./fotos/inter.jpg" alt="Banco Inter">
+                    <p>Banco Inter</p>
+                    <span class="cashback">3% Cashback</span>
+                </div>
+                <div class="bank-card" data-bank="picpay">
+                    <img src="./fotos/PicPay.png" alt="PicPay">
+                    <p>PicPay</p>
+                    <span class="cashback">2% Cashback</span>
+                </div>
+                <div class="bank-card" data-bank="c6bank">
+                    <img src="./fotos/c6-bank.png" alt="C6 Bank">
+                    <p>C6 Bank</p>
+                    <span class="cashback">4% Cashback</span>
+                </div>
+                <div class="bank-card" data-bank="nubank">
+                    <img src="./fotos/nubank.png" alt="Nubank">
+                    <p>Nubank</p>
+                    <span class="cashback">5% Cashback</span>
+                </div>
+            </div>
+        </div>
+
+
+        <div id="livros" class="tab-content">
+            <h3>Cashback em Livros</h3>
+            <label for="bancos-livros">Escolha seu banco:</label>
+            <select id="bancos-livros" class="bank-selector" onchange="filterBanks('livros')">
+                <option value="all">Todos</option>
+                <option value="inter">Banco Inter</option>
+                <option value="picpay">PicPay</option>
+                <option value="c6bank">C6 Bank</option>
+                <option value="nubank">Nubank</option>
+            </select>
+            <div class="cashback-info" id="livros-cashback-info">
+                <div class="bank-card" data-bank="inter">
+                    <img src="./fotos/inter.jpg" alt="Banco Inter">
+                    <p>Banco Inter</p>
+                    <span class="cashback">3% Cashback</span>
+                </div>
+                <div class="bank-card" data-bank="picpay">
+                    <img src="./fotos/PicPay.png" alt="PicPay">
+                    <p>PicPay</p>
+                    <span class="cashback">5% Cashback</span>
+                </div>
+                <div class="bank-card" data-bank="c6bank">
+                    <img src="./fotos/c6-bank.png" alt="C6 Bank">
+                    <p>C6 Bank</p>
+                    <span class="cashback">2% Cashback</span>
+                </div>
+                <div class="bank-card" data-bank="nubank">
+                    <img src="./fotos/nubank.png" alt="Nubank">
+                    <p>Nubank</p>
+                    <span class="cashback">6% Cashback</span>
+                </div>
+            </div>
+        </div>
+
+
+        <div id="cinema" class="tab-content">
+            <h3>Cashback em Cinema</h3>
+            <label for="bancos-cinema">Escolha seu banco:</label>
+            <select id="bancos-cinema" class="bank-selector" onchange="filterBanks('cinema')">
+                <option value="all">Todos</option>
+                <option value="inter">Banco Inter</option>
+                <option value="picpay">PicPay</option>
+                <option value="c6bank">C6 Bank</option>
+                <option value="nubank">Nubank</option>
+            </select>
+            <div class="cashback-info" id="cinema-cashback-info">
+                <div class="bank-card" data-bank="inter">
+                    <img src="./fotos/inter.jpg" alt="Banco Inter">
+                    <p>Banco Inter</p>
+                    <span class="cashback">2% Cashback</span>
+                </div>
+                <div class="bank-card" data-bank="picpay">
+                    <img src="./fotos/PicPay.png" alt="PicPay">
+                    <p>PicPay</p>
+                    <span class="cashback">1% Cashback</span>
+                </div>
+                <div class="bank-card" data-bank="c6bank">
+                    <img src="./fotos/c6-bank.png" alt="C6 Bank">
+                    <p>C6 Bank</p>
+                    <span class="cashback">2% Cashback</span>
+                </div>
+                <div class="bank-card" data-bank="nubank">
+                    <img src="./fotos/nubank.png" alt="Nubank">
+                    <p>Nubank</p>
+                    <span class="cashback">1% Cashback</span>
+                </div>
+            </div>
+        </div>
+
+
+        <div id="academias" class="tab-content">
+            <h3>Cashback em Academias</h3>
+            <label for="bancos-academias">Escolha seu banco:</label>
+            <select id="bancos-academias" class="bank-selector" onchange="filterBanks('academias')">
+                <option value="all">Todos</option>
+                <option value="inter">Banco Inter</option>
+                <option value="picpay">PicPay</option>
+                <option value="c6bank">C6 Bank</option>
+                <option value="nubank">Nubank</option>
+            </select>
+            <div class="cashback-info" id="academias-cashback-info">
+                <div class="bank-card" data-bank="inter">
+                    <img src="./fotos/inter.jpg" alt="Banco Inter">
+                    <p>Banco Inter</p>
+                    <span class="cashback">5% Cashback</span>
+                </div>
+                <div class="bank-card" data-bank="picpay">
+                    <img src="./fotos/PicPay.png" alt="PicPay">
+                    <p>PicPay</p>
+                    <span class="cashback">3% Cashback</span>
+                </div>
+                <div class="bank-card" data-bank="c6bank">
+                    <img src="./fotos/c6-bank.png" alt="C6 Bank">
+                    <p>C6 Bank</p>
+                    <span class="cashback">2% Cashback</span>
+                </div>
+                <div class="bank-card" data-bank="nubank">
+                    <img src="./fotos/nubank.png" alt="Nubank">
+                    <p>Nubank</p>
+                    <span class="cashback">6% Cashback</span>
+                </div>
+            </div>
+        </div>
+
+
+        <div id="fastfood" class="tab-content">
+            <h3>Cashback em Fast Food</h3>
+            <label for="bancos-fastfood">Escolha seu banco:</label>
+            <select id="bancos-fastfood" class="bank-selector" onchange="filterBanks('fastfood')">
+                <option value="all">Todos</option>
+                <option value="inter">Banco Inter</option>
+                <option value="picpay">PicPay</option>
+                <option value="c6bank">C6 Bank</option>
+                <option value="nubank">Nubank</option>
+            </select>
+            <div class="cashback-info" id="fastfood-cashback-info">
+                <div class="bank-card" data-bank="inter">
+                    <img src="./fotos/inter.jpg" alt="Banco Inter">
+                    <p>Banco Inter</p>
+                    <span class="cashback">2% Cashback</span>
+                </div>
+                <div class="bank-card" data-bank="picpay">
+                    <img src="./fotos/PicPay.png" alt="PicPay">
+                    <p>PicPay</p>
+                    <span class="cashback">3% Cashback</span>
+                </div>
+                <div class="bank-card" data-bank="c6bank">
+                    <img src="./fotos/c6-bank.png" alt="C6 Bank">
+                    <p>C6 Bank</p>
+                    <span class="cashback">4% Cashback</span>
+                </div>
+                <div class="bank-card" data-bank="nubank">
+                    <img src="./fotos/nubank.png" alt="Nubank">
+                    <p>Nubank</p>
+                    <span class="cashback">5% Cashback</span>
+                </div>
+            </div>
+            
+        </div>
+        <script>
+            function showTab(tabId) {
+                document.querySelectorAll('.tab-content').forEach(content => content.classList.remove('active'));
+                document.querySelectorAll('.tab-botao').forEach(button => button.classList.remove('active'));
+
+                document.getElementById(tabId).classList.add('active');
+                document.querySelector(`[onclick="showTab('${tabId}')"]`).classList.add('active');
+            }
+
+            function filterBanks(tabId) {
+                const selectElement = document.getElementById(`bancos-${tabId}`);
+                const selectedBank = selectElement.value;
+                const cashbackInfo = document.getElementById(`${tabId}-cashback-info`);
+                const bankCards = cashbackInfo.querySelectorAll('.bank-card');
+
+                bankCards.forEach(card => {
+                    if (selectedBank === "all" || card.getAttribute('data-bank') === selectedBank) {
+                        card.style.display = "inline-block";
+                    } else {
+                        card.style.display = "none";
+                    }
+                });
+            }
+        </script>
+</body>
+
+</html>

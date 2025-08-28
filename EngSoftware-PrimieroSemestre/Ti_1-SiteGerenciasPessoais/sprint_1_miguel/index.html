@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro de Metas Financeiras</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+    <div class="form-container">
+        <h1>Cadastro Metas Financeiras</h1>
+        <form id="metasForm">
+            <label for="nome">Nome :</label>
+            <input type="text" id="nome" name="nome" required>
+
+            <label for="descricao">Descrição :</label>
+            <textarea id="descricao" name="descricao" rows="4" required></textarea>
+
+            <div class="form-row">
+                <div>
+                    <label for="dataInicio">Data Início :</label>
+                    <input type="date" id="dataInicio" name="dataInicio" required>
+                </div>
+                <div>
+                    <label for="dataConclusao">Data Conclusão :</label>
+                    <input type="date" id="dataConclusao" name="dataConclusao" required>
+                </div>
+            </div>
+
+            <label for="categoria">Categoria :</label>
+            <select id="categoria" name="categoria" required>
+                <option value="">Selecione</option>
+                <option value="poupança">Poupança</option>
+                <option value="investimento">Investimento</option>
+                <option value="despesa">Despesa</option>
+            </select>
+
+            <label for="valorObjetivo">Valor do Objetivo (R$) :</label>
+            <input type="number" id="valorObjetivo" name="valorObjetivo" step="0.01" required>
+
+            <label for="iconeMeta">Ícone da Meta :</label>
+            <input type="file" id="iconeMeta" name="iconeMeta" accept="image/*">
+            <label>
+                <input type="checkbox" id="ignorarIcone"> Ignorar Ícone
+            </label>
+
+            <button type="submit">Enviar</button>
+        </form>
+    </div>
+
+    <div id="card-container"></div>
+
+
+    <script src="/assets/js/main.js"></script>
+</body>
+</html>

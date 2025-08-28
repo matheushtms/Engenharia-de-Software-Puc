@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Carrinho de Compras - ReUse</title>
+  <link rel="stylesheet" href="assets/css/gerenciar_carrinho.css">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</head>
+<body>
+
+  <header class="header">
+    <div class="header-top">
+      <div class="logo">
+        <img src="assets/img/Logo-ReUse.png" alt="Logo ReUse">
+      </div>
+    </div>
+
+    <div class="header-bottom">
+      <nav class="nav">
+        <ul class="nav-links">
+          <li><a href="Home-Page.html">Home</a></li>
+          <li><a href="consultaPeca.html">Adicionar Peça</a></li>
+          <li><a href="gerenciar_carrinho.html">Carrinho</a></li>
+          <li><a href="perfil.html">Perfil</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <h2 class="cart-title">Meu Carrinho</h2>
+    <div id="cart-items" class="cart-items"></div>
+
+    <div class="total-container">
+      <p>Total: <span id="total">R$ 0,00</span></p>
+    </div>
+
+    <div class="btn-finalizar">
+      <button id="checkout-btn">
+        <i class="fas fa-lock" style="margin-right: 8px;"></i>
+        Finalizar Compra
+      </button>
+    </div>
+  </main>
+
+  <script src="./assets/js/gerenciar_carrinho.js"></script>
+</body>
+</html>

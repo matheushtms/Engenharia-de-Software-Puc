@@ -1,0 +1,172 @@
+/* BASE E FONTE */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Montserrat', serif;
+  background-color: #f0f0ec;
+  color: #394725;
+  overflow-x: hidden;
+}
+
+/* HEADER - NÃO MEXER */
+header {
+  height: 119px;
+  width: 100%;
+  background-color: #394725;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.logo img {
+  height: 100px;
+}
+
+/* MAIN */
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 40px 20px;
+  min-height: calc(100vh - 119px);
+  gap: 30px;
+  background: linear-gradient(to bottom, #f0f0ec, #e6e6df);
+}
+
+/* TÍTULO */
+main h2 {
+  font-size: 2.8rem;
+  font-weight: 700;
+  color: #2f3b1d;
+  text-align: center;
+}
+
+/* FORMULÁRIOS GERAIS */
+form {
+  background-color: #ffffff;
+  padding: 35px 40px;
+  border-radius: 18px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+  width: 100%;
+  max-width: 500px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  transition: all 0.3s ease;
+}
+
+/* LABELS E INPUTS */
+label {
+  font-size: 1.2rem;
+  font-weight: 500;
+  color: #394725;
+  margin-bottom: 6px;
+}
+
+input {
+  padding: 14px;
+  font-size: 1.05rem;
+  border: 1.5px solid #ccc;
+  border-radius: 12px;
+  background-color: #fafafa;
+  transition: border-color 0.3s;
+}
+
+input:focus {
+  outline: none;
+  border-color: #394725;
+  background-color: #fff;
+}
+
+/* BOTÕES */
+button {
+  margin-top: 10px;
+  padding: 15px;
+  font-size: 1.1rem;
+  background-color: #394725;
+  color: #fff;
+  border: none;
+  border-radius: 14px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #2f3b1d;
+}
+
+/* FORMULÁRIO DE ATUALIZAÇÃO DE SENHA */
+#formAtualizarSenha {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  padding: 35px 40px;
+  background-color: #ffffff;
+  border-radius: 18px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+  width: 100%;
+  max-width: 500px;
+  margin-bottom: 30px;
+  gap: 20px;
+}
+
+#formAtualizarSenha label {
+  font-size: 1.2rem;
+  color: #394725;
+  font-weight: 500;
+  margin-bottom: 6px;
+}
+
+#formAtualizarSenha input {
+  width: 100%;
+  padding: 14px;
+  font-size: 1rem;
+  background-color: #fff;
+  border: 1.5px solid #ccc;
+  border-radius: 12px;
+  box-sizing: border-box;
+}
+
+#formAtualizarSenha button {
+  padding: 14px;
+  font-size: 1.1rem;
+  font-weight: bold;
+  background-color: #394725;
+  color: #fff;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  width: 100%;
+}
+
+#formAtualizarSenha button:hover {
+  background-color: #2f3b1d;
+}
+
+/* RESPONSIVO */
+@media (max-width: 600px) {
+  main {
+    padding: 30px 10px;
+  }
+
+  form,
+  #formAtualizarSenha {
+    padding: 25px 20px;
+  }
+
+  input,
+  button {
+    font-size: 1rem;
+  }
+
+  main h2 {
+    font-size: 2rem;
+  }
+}

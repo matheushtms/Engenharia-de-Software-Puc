@@ -1,0 +1,14 @@
+[
+    {
+        "categoria": "sapatos",
+        "banco": "Banco Inter",
+        "cashback": "5%",
+        "imagem": "https://exemplo.com/inter.jpg"
+    },
+    {
+        "categoria": "roupas",
+        "banco": "PicPay",
+        "cashback": "7%",
+        "imagem": "https://exemplo.com/picpay.jpg"
+    }
+]

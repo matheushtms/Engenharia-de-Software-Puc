@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Horizonte Finanças</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=filter_alt" />
+</head>
+<body>
+    <header>
+        <button class="btn-voltar" onclick="window.location.href = '../index.html';">Voltar</button>
+        <h2>Horizonte Financeiro</h2>
+    </header>
+    <div class="content">
+        <main class="main-content">
+            <section class="info">
+                <div class="grafico">
+                    <canvas id="graficoLinha" width="800" height="200"></canvas>
+                </div>
+            </section>
+            <section class="relatorio">
+                <div class="relatorio-header">
+                <h2>Relatório</h2>
+                <div class="filtro">
+                    <button class="filtrobtn"><span class="material-symbols-outlined">
+                        filter_alt
+                        </span>
+                    </button>
+                    <div class="filtro-opcoes">
+                        <button class="opcao" data-filtro="mensal">Mensal</button>
+                        <button class="opcao" data-filtro="semanal">Semanal</button>
+                    </div>
+                </div>
+                </div>
+                <div class="relatorio-content">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Período</th>
+                            <th>Média de Gastos</th>
+                            <th>Total de Gastos</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                    </tbody>
+                </table>
+            </div>
+            </section>
+        </main>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

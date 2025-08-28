@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Página Inicial - Brechó</title>
+  <link rel="stylesheet" href="assets/css/home-page.css" />
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+  <script defer src="assets/js/Home-Page.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css">
+</head>
+<body>
+<header class="header">
+  <div class="header-top">
+    <div class="logo">
+      <img src="assets/img/Logo-ReUse.png" alt="Logo ReUse" />
+    </div>
+  </div>
+
+  <div class="header-bottom">
+    <nav class="nav">
+      <ul class="nav-links">
+        <li><a href="Home-Page.html">Home</a></li>
+        <li><a href="consultaPeca.html">Adicionar Peça</a></li>
+        <li><a href="gerenciar_carrinho.html">Carrinho</a></li>
+        <li><a href="perfil.html">Perfil</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<div class="carousel">
+  <div class="slide ativo">
+    <img src="./assets/img/imagem-carrossel3.png" alt="Banner 1">
+  </div>
+  <div class="slide">
+    <img src="./assets/img/imagem-carrossel2.png" alt="Banner 2">
+  </div>
+  <div class="slide">
+    <img src="./assets/img/Captura de tela 2025-05-31 040931.png" alt="Banner 3">
+  </div>
+</div>
+
+<div class="search-container">
+  <input type="text" id="filtro-nome" placeholder="Nome da peça" />
+  <select id="filter-categoria">
+    <option value="">Categoria</option>
+    <option value="camisa">Camisa</option>
+    <option value="calça">Calça</option>
+    <option value="jaqueta">Jaqueta</option>
+    <option value="vestido">Vestido</option>
+    <option value="acessorio">Acessório</option>
+  </select>
+  <select id="filter-tamanho">
+    <option value="">Tamanho</option>
+    <option value="pp">PP</option>
+    <option value="p">P</option>
+    <option value="m">M</option>
+    <option value="g">G</option>
+    <option value="gg">GG</option>
+    <option value="xg">XG</option>
+    <option value="xxg">XXG</option>
+  </select>
+  <select id="filter-condicao">
+    <option value="">Conservação</option>
+    <option value="novo">Novo</option>
+    <option value="semi-novo">Semi-novo</option>
+    <option value="usado">Usado</option>
+  </select>
+  <select id="filter-cor">
+    <option value="">Cor</option>
+    <option value="preto">Preto</option>
+    <option value="branco">Branco</option>
+    <option value="azul">Azul</option>
+    <option value="vermelho">Vermelho</option>
+    <option value="verde">Verde</option>
+    <option value="amarelo">Amarelo</option>
+    <option value="rosa">Rosa</option>
+    <option value="multicolorido">Multicolorido</option>
+  </select>
+  <button id="botao-buscar">Buscar</button>
+</div>
+
+<main id="card-container" class="card-container">
+  <!-- Cards gerados pelo JS -->
+</main>
+
+</body>
+</html>

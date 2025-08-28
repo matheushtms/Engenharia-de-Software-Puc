@@ -1,0 +1,18 @@
+Aluno: Pedro Henrique Roldão da Silva
+
+Atualizando minha função Registrar Dinheiro
+
+Updates
+
+* Responsividade
+* Data Formatada para o padrão brasileiro
+* Mudança de seleção na aba categoria
+* Função para mostrar o saldo total, positivo e negativo
+que o usuário inseriu.
+* Adicionado registro de Bancos
+* Melhora visual
+
+
+Update Futuro
+
+* Botão filtrar 

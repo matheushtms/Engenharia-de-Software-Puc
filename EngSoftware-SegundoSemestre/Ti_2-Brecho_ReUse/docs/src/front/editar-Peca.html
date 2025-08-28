@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cadastro de Peça</title>
+  <link rel="stylesheet" href="assets/css/cadastroPeca.css">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">  
+</head>
+<body>
+
+<header class="header">
+  <div class="header-top">
+    <div class="logo">
+      <img src="assets/img/Logo-ReUse.png" alt="Logo ReUse" />
+    </div>
+  </div>
+
+  <div class="header-bottom">
+    <nav class="nav">
+      <ul class="nav-links">
+        <li><a href="Home-Page.html">Home</a></li>
+        <li><a href="consultaPeca.html">Adicionar Peça</a></li>
+        <li><a href="gerenciar_carrinho.html">Carrinho</a></li>
+        <li><a href="perfil.html">Perfil</a></li>
+      </ul>
+    </nav>
+</div>
+</header>
+
+<div class="btn-excluir-topo">
+  <button type="button" class="lixeira-btn">
+    Excluir peça
+    <img src="assets/icons/icone-lixeira-preta.png" alt="Excluir" />
+  </button>
+</div>
+
+
+<div class="container">
+    <form id="form-cadastro-peca">
+        <div class="image-upload">
+            <label for="upload-img">
+                <img src="assets/icons/icone-adiconar.png" alt="Upload" width="40">
+            </label>
+            <input type="file" id="upload-img" style="display: none">
+        </div>
+                
+      <input type="text" name="nome" placeholder="Título" required>
+      <select name="categoria" required>
+        <option disabled selected>Selecione a categoria</option>
+        <option>Camisa</option>
+        <option>Calça</option>
+        <option>Jaqueta</option>
+        <option>Vestido</option>
+        <option>Acessório</option>
+      </select>
+      <select name="tamanho" required>
+        <option disabled selected>Selecione o tamanho</option>
+        <optgroup label="Tamanhos em letras">
+          <option>PP</option>
+          <option>P</option>
+          <option>M</option>
+          <option>G</option>
+          <option>GG</option>
+          <option>XG</option>
+          <option>XXG</option>
+        </optgroup>
+        <optgroup label="Tamanhos numéricos femininos">
+          <option>34</option>
+          <option>36</option>
+          <option>38</option>
+          <option>40</option>
+          <option>42</option>
+          <option>44</option>
+          <option>46</option>
+          <option>48</option>
+          <option>50</option>
+          <option>52</option>
+          <option>54</option>
+          <option>56</option>
+        </optgroup>
+        <optgroup label="Tamanhos numéricos masculinos">
+          <option>36</option>
+          <option>38</option>
+          <option>40</option>
+          <option>42</option>
+          <option>44</option>
+          <option>46</option>
+          <option>48</option>
+          <option>50</option>
+          <option>52</option>
+          <option>54</option>
+          <option>56</option>
+          <option>58</option>
+          <option>60</option>
+        </optgroup>
+      </select>
+      <select name="condicao" required>
+        <option disabled selected>Conservação</option>
+        <option>Novo</option>
+        <option>Semi-novo</option>
+        <option>Usado</option>
+      </select>
+      <select name="cor" required>
+        <option disabled selected>Cor</option>
+        <option>Preto</option>
+        <option>Branco</option>
+        <option>Azul</option>
+        <option>Vermelho</option>
+        <option>Verde</option>
+        <option>Amarelo</option>
+        <option>Rosa</option>
+        <option>Multicolorido</option>
+      </select>
+      <textarea name="descricao" placeholder="Descrição" required></textarea>
+
+      <!-- Campo hidden para enviar o usuarioId -->
+      <input type="hidden" name="usuarioId" value="1">
+
+      <!-- Botão de confirmar -->
+      <button type="submit">Confirmar</button>
+    </form>
+  </div>
+
+  <!-- Mensagem para feedback do cadastro -->
+  <div id="mensagem"></div>
+  <script src="assets/js/editarPeca.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</body>
+</html>

@@ -1,0 +1,164 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Montserrat', serif;
+  background-color: #f4f4f4;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  color: #2d2d2d;
+}
+
+.container {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.header-top {
+  background-color: #394725;
+  height: 140px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-bottom: 1px solid black;
+}
+
+.logo img {
+  width: 115px;
+  height: 120px;
+}
+
+.content {
+  flex: 1;
+  padding: 40px 20px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.content h1 {
+  font-size: 30px;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+
+.content p {
+  font-family: Arial, sans-serif;
+  font-size: 17px;
+  margin-bottom: 30px;
+  color: #555;
+  max-width: 520px;
+  line-height: 1.5;
+}
+
+.content label {
+  font-size: 18px;
+  margin-bottom: 8px;
+  font-weight: 500;
+}
+
+.content input {
+  padding: 12px;
+  font-size: 16px;
+  width: 100%;
+  max-width: 420px;
+  border-radius: 10px;
+  border: 1px solid #bbb;
+  margin-top: 10px;
+  margin-bottom: 25px;
+  text-align: center;
+  transition: border-color 0.3s, box-shadow 0.3s;
+  box-shadow: 0 1px 2px rgba(0,0,0,0.08);
+}
+
+.content input:focus {
+  outline: none;
+  border-color: #394725;
+  box-shadow: 0 0 7px rgba(57, 71, 37, 0.3);
+}
+
+.confirmar-btn {
+  background-color: #394725;
+  color: white;
+  font-size: 18px;
+  padding: 12px 30px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  width: 100%;
+  max-width: 300px;
+  transition: 0.3s ease;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.confirmar-btn:hover {
+  background-color: #2f3a21;
+  transform: scale(1.02);
+}
+
+.footer {
+  background-color: #394527;
+  padding: 14px 0;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  box-shadow: 0 -1px 5px rgba(0, 0, 0, 0.1);
+}
+
+.footer-icon-button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  transition: transform 0.3s;
+}
+
+.footer-icon-button img {
+  width: 28px;
+  height: 28px;
+}
+
+.footer-icon-button:hover {
+  transform: scale(1.1);
+}
+
+@media (max-width: 768px) {
+  .header-top {
+    height: 100px;
+  }
+
+  .logo img {
+    width: 75px;
+    height: 80px;
+  }
+
+  .content {
+    padding: 20px 15px;
+  }
+
+  .content h1 {
+    font-size: 24px;
+  }
+
+  .content p, .content label {
+    font-size: 16px;
+  }
+
+  .confirmar-btn,
+  .content input {
+    width: 90%;
+  }
+
+  .footer {
+    padding: 10px 0;
+  }
+}

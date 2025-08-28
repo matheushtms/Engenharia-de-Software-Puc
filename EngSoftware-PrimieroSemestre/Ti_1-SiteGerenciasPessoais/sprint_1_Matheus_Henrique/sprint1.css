@@ -1,0 +1,130 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f8ff;
+    color: #333;
+}
+
+.superio {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #00bfff;
+    padding: 10px;
+    color: white;
+}
+
+.botao {
+    background-color: #00008b;
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.nome {
+    display: flex;
+    align-items: center;
+}
+
+.logo h1 {
+    font-size: 20px;
+}
+
+.dashboard {
+    padding: 20px;
+}
+
+.grafico {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.tamanho {
+    flex: 0 1 600px;
+    margin: 20px;
+    text-align: center;
+    max-width: 100%;
+}
+
+
+
+.chart-item canvas {
+    max-width: 100%;
+    height: auto;
+}
+
+.selecionar {
+    margin: 20px 0;
+    text-align: center;
+}
+
+.meses {
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #00bfff;
+}
+
+.gastos h3 {
+    margin-bottom: 10px;
+}
+
+.gastos ul {
+    list-style: none;
+    padding: 0;
+}
+
+.gastos li {
+    background-color: #e0f7fa;
+    margin-bottom: 10px;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    border-radius: 5px;
+}
+
+#Assinaturas {
+    background-color: #4bc0c0;
+
+}
+
+#Lazer {
+    background-color: #ffce56;
+
+}
+
+#Alimentaçao {
+    background-color: #ff638f;
+
+}
+
+#cuidadospessoais {
+    background-color: #36a2eb;
+
+}
+
+#gastosChart {
+    width: 400px;
+    height: 200px;
+    height: auto;
+}
+
+
+@media (max-width: 768px) {
+    .charts-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .chart-item {
+        margin: 10px 0;
+    }
+}

@@ -1,0 +1,51 @@
+<!-- HTML para controle de parcelas -->
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Controle de Parcelas</title>
+    <link rel="stylesheet" href="./assets/css/style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Controle de Parcelas</h1>
+        <form id="parcelasForm">
+            <div class="form-group">
+                <label for="valorTotal">Valor Total</label>
+                <input type="number" id="valorTotal" value="5000" readonly />
+            </div>
+            <div class="form-group">
+                <label for="descricao">Descrição da Parcela:</label>
+                <input type="text" id="descricao" required>
+            </div>
+            <div class="form-group">
+                <label for="valor">Valor da Parcela:</label>
+                <input type="number" id="valor" step="0.01" required>
+            </div>
+            <div class="form-group">
+                <label for="data">Data de Vencimento:</label>
+                <input type="date" id="data" required>
+            </div>
+            <button type="submit">Adicionar Parcela</button>
+        </form>
+
+        <h2>Lista de Parcelas</h2>
+        <ul id="parcelasList"></ul>
+
+        <div class="mini-cards-container">
+            <div class="mini-card">
+                <h2>Total Descontado</h2>
+                <p id="valorDescontado">R$ 0,00</p>
+            </div>
+            <div class="mini-card">
+                <h2>Total Restante</h2>
+                <p id="valorRestante">R$ 5.000,00</p>
+            </div>
+        </div>
+    </div>
+
+    <script src="./assets/js/main.js"></script>
+</body>
+</html>
+
